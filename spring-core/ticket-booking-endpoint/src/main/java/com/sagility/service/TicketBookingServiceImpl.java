@@ -22,6 +22,7 @@ public class TicketBookingServiceImpl implements TicketBookingService {
 		ticket.setStatus("CONFIRMED");
 		pnr = (long) Math.floor(Math.random() * 9_000_000L) + 1_000_000_000L;
 		ticket.setPnrNumber(pnr.toString());
+		ticketMap.put(ticket.getPnrNumber(), ticket);
 		// TODO Auto-generated method stub
 		return ticket;
 	}
