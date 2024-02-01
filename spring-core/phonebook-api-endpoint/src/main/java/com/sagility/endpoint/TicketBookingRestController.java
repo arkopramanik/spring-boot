@@ -15,13 +15,13 @@ import com.sagility.response.Ticket;
 import com.sagility.service.TicketBookingService;
 
 @RestController
-@RequestMapping("/phonebook")
-public class PhoneBookRestController {
+@RequestMapping("/ticketplatform")
+public class TicketBookingRestController {
 	
 	@Autowired
 	TicketBookingService ticketBookingService;
 
-	@PostMapping(value = "/addContact", 
+	@PostMapping(value = "/bookticket", 
 			consumes = { "application/xml", "application/json" }, 
 			produces = { "application/xml", "application/json" })
 	public ResponseEntity<Ticket> bookTicket(@RequestBody Passenger passenger) {

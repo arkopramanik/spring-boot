@@ -20,7 +20,8 @@ public class TicketBookingClientImpl implements TicketBookingClientService {
 		.bodyValue(passenger)
 		.retrieve()
 		.bodyToMono(Ticket.class)
-		.block();
+		.block();	// synchronous call
+		
 		return ticket;
 	}
 
