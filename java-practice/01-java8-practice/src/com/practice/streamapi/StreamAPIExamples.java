@@ -177,6 +177,15 @@ public class StreamAPIExamples {
 		Map<String, List<EmployeeCountry>> mapEmp = Stream.of(emp1, emp2, emp3)
 				.collect(Collectors.groupingBy(e -> e.country));
 		System.out.println(mapEmp);
+		
+		//slicing operation
+		System.out.println("***************************************");
+		List<String> family = Arrays.asList("Arko", "Diksha", "Hridaan", "Rekha", "Hiren","Arko");
+		family.stream().limit(3).forEach(System.out::println);
+		System.out.println("--------------");
+		family.stream().skip(3).forEach(System.out::println);
+		System.out.println("---------------");
+		family.stream().distinct().forEach(System.out::println);
 
 	}
 
