@@ -3,6 +3,7 @@ package com.practice.streamapi;
 import java.util.Arrays;
 import java.util.List;
 
+//slicing operation in stream
 public class SlicingOperations {
 	public static void main(String[] args) {
 		List<String> family = Arrays.asList("Arko", "Diksha", "Hridaan", "Rekha", "Hiren","Arko");
