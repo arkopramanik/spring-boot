@@ -8,7 +8,7 @@ public class GreetRestController {
 	
 	@GetMapping("/greet")
 	public String getMessage() {
-		return "Welcome to greet app";
+		return "Hi Dear, ";
 	}
 
 }
