@@ -1,5 +1,6 @@
 package com.sagility;
 
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -23,6 +24,11 @@ public class MyFilter implements GlobalFilter {
 		keySet.forEach(key -> {
 			System.out.print(key + "---");
 			System.out.println(headers.getValuesAsList(key));
+		});
+
+		keySet.forEach(key -> {
+			List<String> values = headers.get(key);
+			System.out.println(key + "::" + values);
 		});
 
 		return chain.filter(exchange);
